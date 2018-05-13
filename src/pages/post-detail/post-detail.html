@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="hem_purple">
+    <ion-buttons style="float: right">
+      <button ion-button navPop>
+        Փակել
+      </button>
+    </ion-buttons>
+    <ion-title>Մանրամասներ </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="my_content">
+  <ion-card>
+    <ion-card-content>
+      <ion-card-title>
+        {{ post.title }}
+      </ion-card-title>
+      <p>
+        {{ post.body }}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

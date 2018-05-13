@@ -1,0 +1,68 @@
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>B'Comm սրճարան</ion-title>
+  </ion-navbar>
+  <ion-navbar color="hem_purple">
+    <ion-title text-center></ion-title>
+    <button ion-button menuToggle ><i class="fa fa-list" aria-hidden="true"></i> &nbsp; Մենյու</button>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding class="my_content">
+  <ion-menu background="hem_purple" type="overlay" [content]="mycontent">
+    <ion-content>
+      <ion-list>
+        <button class="menu_btn_item" (click)="goToPosts();"><i class="fa fa-newspaper-o" aria-hidden="true"></i>  &nbsp;  Նորություններ</button>
+      </ion-list>
+      <ion-list>
+        <button class="menu_btn_item" (click)="goToExistingProblems();"><i class="fa fa-list-alt" aria-hidden="true"></i> &nbsp; Հրատապ խնդիրներ </button>
+      </ion-list>
+      <ion-list>
+        <button class="menu_btn_item" (click)="goToUpcomingProblems();"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> &nbsp; Առկա խնդիրներ</button>
+      </ion-list>
+      <ion-list>
+        <button class="menu_btn_item" (click)="goToHistory();"><i class="fa fa-history" aria-hidden="true"></i>  &nbsp; Պատմություն</button>
+      </ion-list>
+      <!-- <ion-list>
+        <ion-item class="menu_btn_item" menuClose detail-none button-icon><i class="fa fa-times" aria-hidden="true"></i> &nbsp; Close Menu</ion-item>
+      </ion-list> -->
+    </ion-content>
+  </ion-menu>
+
+
+  <div class="my_center center_div clean" >
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Էլեկտրոնային հասցե</ion-label>
+        <ion-input type="text" [formControl]="form.controls['email']"></ion-input>
+      </ion-item>
+      <div class="errors" *ngIf="(submitted || form.controls['email'].touched) && form.controls['email'].errors">
+        <span *ngIf="form.controls['email'].errors.required">Դաշտը պարտադիր է լրացման համար</span>
+        <span *ngIf="form.controls['email'].errors.email && !form.controls['email'].errors.required">
+          Մուտքագրված արժեքը պետք է լինի էլեկտրոնային հասցե
+        </span>
+      </div>
+      <ion-item>
+        <ion-label floating>Գաղտնաբառ</ion-label>
+        <ion-input type="password" [formControl]="form.controls['password']"></ion-input>
+      </ion-item>
+      <div class="errors" *ngIf="(submitted || form.controls['password'].touched) && form.controls['password'].errors">
+        <span *ngIf="form.controls['password'].errors.required">Դաշտը պարտադիր է լրացման համար</span>
+      </div>
+    </ion-list>
+    <div text-left class="login_btns">
+      <button ion-button color="hem_purple" (click)="register(form.value)">
+        Գրանցվել
+      </button>
+    </div>
+    <div text-right class="login_btns">
+       <button ion-button color="hem_purple" (click)="login(form.value)">
+         Մուտք
+       </button>
+    </div>
+  </div>
+</ion-content>

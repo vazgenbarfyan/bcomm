@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="hem_purple">
+    <ion-title>Հրատապ խնդիրներ</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="my_content">
+  <div class="my_center center_div" *ngFor="let post of posts">
+    <ion-list radio-group (click)="goToPostDetail(post)">
+      <ion-list-header class="problem_title">{{ post.title }}</ion-list-header>
+    </ion-list>
+    <div text-right>
+      <button ion-button (click)="openAdminModal(post)" *ngIf="isAdmin">Admini hamar</button>
+      <button class="vote_btn" (click)="vote(post)">Քվեարկել</button>
+      <button ion-button color="hem_purple">{{ post.votes }}</button>
+    </div>
+  </div>
+</ion-content>

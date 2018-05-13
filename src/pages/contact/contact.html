@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar color="hem_purple">
+    <ion-title>
+      Քո գաղափարը
+    </ion-title>
+    <button ion-button menuToggle ><i class="fa fa-list" aria-hidden="true"></i></button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="my_content">
+  <div class="my_center center_div">
+    <ion-list margin-horizontal>
+      <div text-center>
+        <p class="contact_us_p">Ունես նոր գաղափա՞ր...</p>
+      </div>
+      <ion-item>
+        <ion-label floating >Վերնագիր</ion-label>
+        <ion-input type="text" [formControl]="form.controls['title']"></ion-input>
+      </ion-item>
+      <div class="errors" *ngIf="(submitted || form.controls['title'].touched) && form.controls['title'].errors">
+        <span *ngIf="form.controls['title'].errors.required">Դաշտը պարտադիր է լրացման համար</span>
+      </div>
+      <ion-item class="center_div">
+          <ion-textarea rows="5" placeholder="Գրե՛ք Ձեր գաղափարն այստեղ" [formControl]="form.controls['body']"></ion-textarea>
+      </ion-item>
+      <div class="errors" *ngIf="(submitted || form.controls['body'].touched) && form.controls['body'].errors">
+        <span *ngIf="form.controls['body'].errors.required">Դաշտը պարտադիր է լրացման համար</span>
+      </div>
+      <div text-right>
+         <button ion-button color="hem_purple" (click)="submitPost(form.value)">
+           Ուղարկել
+         </button>
+      </div>
+    </ion-list>
+  </div>
+
+
+  <div class="my_center center_div">
+    <ion-list>
+      <ion-grid class="my_center">
+        <ion-row>
+          <ion-col class="history_col" width-10>
+              <h5><i class="fa fa-female" aria-hidden="true"></i></h5>
+          </ion-col>
+          <ion-col class="history_col" width-30>
+              <h5>Տնօրեն</h5>
+          </ion-col>
+          <ion-col class="history_col" width-50>
+              <h5>Հերմինե</h5>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="history_col" width-10>
+              <h5><i class="fa fa-phone" aria-hidden="true"></i></h5>
+          </ion-col>
+          <ion-col class="history_col" width-30>
+              <h5>Հեռ․</h5>
+          </ion-col>
+          <ion-col class="history_col" width-50>
+              <h5>091 111 112</h5>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="history_col" width-10>
+              <h5><i class="fa fa-envelope" aria-hidden="true"></i></h5>
+          </ion-col>
+          <ion-col class="history_col" width-30>
+              <h5>Էլ․ հասցե</h5>
+          </ion-col>
+          <ion-col class="history_col" width-50>
+              <h5>hemo@bcomm.com</h5>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="history_col" width-10>
+              <h5><i class="fa fa-address-card-o" aria-hidden="true"></i></h5>
+          </ion-col>
+          <ion-col class="history_col" width-30>
+              <h5>Հասցե</h5>
+          </ion-col>
+          <ion-col class="history_col" width-50>
+              <h5>Եղեգնաձոր, B'Comm 1/12</h5>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+
+</ion-content>

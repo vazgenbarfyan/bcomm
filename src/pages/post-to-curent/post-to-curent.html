@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="hem_purple">
+    <ion-buttons style="float: right">
+      <button ion-button navPop>
+        Փակել
+      </button>
+    </ion-buttons>
+    <ion-title>Մանրամասներ </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="my_content">
+  <div class="my_center center_div">
+    <ion-list margin-horizontal>
+      <ion-item>
+        <ion-label floating >Ամսաթիվ</ion-label>
+        <ion-input type="date" #datePicker></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating >Վայր</ion-label>
+        <ion-input type="text" #place></ion-input>
+      </ion-item>
+      <div text-right>
+        <button ion-button color="hem_purple" (click)="onSubmit({date: datePicker.value, info: place.value})">
+          Ուղարկել
+        </button>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>

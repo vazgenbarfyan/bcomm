@@ -1,0 +1,27 @@
+
+<ion-header>
+  <ion-navbar color="hem_purple">
+    <ion-title>Առկա խնդիրներ</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="my_content">
+  <div class="my_center center_div">
+    <ion-list>
+      <ion-grid class="my_center">
+        <ion-row  class="history_row">
+          <ion-col class="history_col" *ngFor="let post of posts">
+            <div (click)="goToPostDetail(post)">
+              <h4>{{ post.title }}</h4>
+              <h6> {{ post.meeting.date | date : 'dd.MM.yy' }} </h6>
+              <span style="font-size: larger">{{ post.meeting.info }}</span>
+            </div>
+            <div *ngIf="isAdmin">
+              <button ion-button color="light" (click)="accept(post)"><i class="fa fa-check-circle" aria-hidden="true"></i></button>
+              <button ion-button color="light" (click)="decline(post)"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+</ion-content>

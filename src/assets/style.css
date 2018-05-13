@@ -1,0 +1,110 @@
+.tab-button-text{
+  color: #f5e0f3;
+  font-weight: bold;
+}
+/*.tabs-md .tab-button[aria-selected=true]{
+  background: #652b5f;
+}*/
+.tab-button-icon.icon.icon-md{
+  color: #f5e0f3;
+}
+.tab-button-icon.icon.icon-md.ion-md-bulb{
+  color: #ffd705;
+}
+.my_content{
+  background: #f5e0f3;
+  color: black;
+}
+
+.my_center{
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  background: white;
+}
+
+.menu_btn_item{
+  background: inherit;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+  padding: 13px;
+  font-size: initial;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.about_post_date{
+  color:lightgray;
+}
+.about_post_col{
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  background: rgba(211, 211, 211, 0.08);
+}
+.contact_us_p{
+  font-size: x-large;
+}
+
+.history_col{
+  margin: auto;
+}
+
+.history_date{
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.history_title{
+  float: left;
+  width: 75%;
+  box-sizing: border-box;
+}
+.history_row{
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  display: inline-block;
+}
+.fa-times-circle{
+  color: red;
+}
+.fa-check-circle{
+  color: green;
+}
+.problem_title{
+  border-bottom: 1px solid lightgrey;
+  border-top: none;
+  color: black;
+  font-size: x-large;
+}
+.center_div{
+  padding: 20px;
+  width: 95%;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.upcoming_row{
+  padding: 5%;
+}
+.vote_btn{
+  padding: 10px 30px;
+  display: flex;
+  background: #652b5f;
+  color: white;
+  margin: auto;
+  border-radius: 5px;
+}
+.login_btns{
+  float: left;
+  box-sizing: border-box;
+  width: 50%;
+}
+.clean:after {
+    content: "";
+    display: block;
+    clear: both;
+}
