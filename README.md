@@ -1,5 +1,7 @@
 # Bcomm Client
 
+![Logo](./icon.png)
+
 Bcomm (Be Community) is a mobile application built to bring young representatives of community together and help them change the structure of their community and thus make it better. A community member submits a proposal for change. Then, the proposal has to get votes from different members of community. If the number of votes is enough, the proposal gets to the part of the government associated with the current part of community who made the proposal. 
 
 ## Used technologies
