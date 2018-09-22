@@ -24,3 +24,9 @@ ionic serve
 ```
 
 NOTE! In order to have the application functioning fully, you also need to download the server of the application from the followin [repository](https://github.com/vazgenbarfyan/bcomm-server.git). After downloading, follow the instructions to install and run the server properly.
+
+## Link to Google Play
+
+You can download the application from Google Play by following [this](https://play.google.com/store/apps/details?id=com.ionicframework.aproject826809) link.
+
+NOTE! Be informed that the application may have some issues connected with the server. If the connection yields some problems, you can report them. 
